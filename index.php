@@ -1,4 +1,5 @@
 <?php
+
 define('__RACINE__', __DIR__ . '/');
 include 'html/composants/entete.html';
 
