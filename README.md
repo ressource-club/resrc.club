@@ -2,7 +2,7 @@
 
 ## Dépendances
 Les bibliothèques suivantes sont nécessaires au fonctionnement du site :
-- [__tailwindcss__](https://tailwindcss.com)
+- [__tailwindcss__](https://tailwindcss.com) _via CDN_
 - [__github-buttons__](https://buttons.github.io/)
 
 ## Déploiement
