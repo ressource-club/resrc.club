@@ -12,4 +12,13 @@ function definir_route(string $uri) : string
     }
 }
 
+function proceder(string $uri)
+{
+    $route = definir_route($_SERVER['REQUEST_URI']);
+
+    include __RACINE__ . 'html/composants/entete.html';
+    include $route;
+    include __RACINE__ . 'html/composants/pied.html';
+}
+
 ?>
