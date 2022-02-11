@@ -1,12 +1,14 @@
 <?php
 
-function definir_route(string $uri) : void
+function definir_route(string $uri) : string
 {
     switch ($uri)
     {
+    case '/':
+        return __RACINE__ . 'html/citation.html';
     default:
-        include __RACINE__ . 'html/citation.html';
-        break;
+        header("HTTP/1.1 404 Not Found");
+        return __RACINE__ . 'html/404.html';
     }
 }
 
