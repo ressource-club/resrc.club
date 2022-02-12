@@ -11,7 +11,7 @@
         padding-top: 1.5rem;
         padding-bottom: 3rem;
         padding-left: 0!important;
-        font-size: 0.85rem!important;
+        font-size: 0.8rem!important;
     }
     header #menu a { padding: 0 0.85rem!important; }
 }
@@ -20,6 +20,9 @@
 }
 @media (max-width: 768px)
 {
+    header #menu { font-size: 0.8rem!important; }
+    header #menu a { padding: 0 0.6rem!important; }
+    #contenu .citation p { font-size: larger; }
 }
 @media (min-width: 768px)
 {
