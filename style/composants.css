@@ -1,0 +1,50 @@
+/* HEADER */
+header
+{
+    display: inline-flex;
+}   
+header #titre
+{
+    font-weight: 900;
+    font-size: xx-large;
+    margin-bottom: 1rem;
+}
+header div#menu
+{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+    padding-left: 2rem;
+}
+header div#menu a
+{
+    padding: 0 1.8rem;
+}
+
+/* CONTENU */
+#contenu
+{
+    margin: 0 0.16rem;
+}
+
+/* FOOTER */
+footer
+{
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+footer div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div#langues
+{
+    font-size: 0.75rem;
+}
+footer div#langues a
+{
+    padding: 0 1.5rem;
+}

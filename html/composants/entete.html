@@ -8,12 +8,19 @@
     <title>ressource_club</title>
 
     <style>
-        <?php include_once __RACINE__ . 'style/base.css'; ?>
+        <?php include_once __RACINE__ . 'style/index.css'; ?>
     </style>
 </head>
 
-<body class="px-10 font-mono bg-zinc-900 text-zinc-50 w-screen h-screen flex items-center justify-center">
+<body>
     <div id="vue">
-        <header class="text-5xl font-bold mb-4">
-            ressource_club
+        <header>
+            <h1 id="titre">ressource_club</h1>
+            <div id="menu">
+                <a id="accueil" href="/"><?= $_SESSION[LANGUE_INDEX]['menu'][0] ?></a>
+                <a id="projets" href="/projets/"><?= $_SESSION[LANGUE_INDEX]['menu'][1] ?></a>
+                <a id="a-propos" href="/a-propos/"><?= $_SESSION[LANGUE_INDEX]['menu'][2] ?></a>
+                <a id="connexion" href="/connexion/"><?= $_SESSION[LANGUE_INDEX]['menu'][3] ?></a>
+            </div>
         </header>
+        <div id="contenu">

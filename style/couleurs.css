@@ -1,0 +1,17 @@
+:root
+{
+    --couleur-fond: rgb(24 24 27);
+    --couleur-texte: rgb(250 250 250);
+}
+
+
+a
+{
+    color: var(--couleur-texte);
+    text-decoration: none;
+}
+a:hover
+{
+    color: var(--couleur-texte);
+    text-decoration: underline;
+}

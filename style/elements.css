@@ -1,0 +1,17 @@
+/* CITATION */
+.citation p
+{
+    margin-bottom: 0.75rem;
+    font-size: x-large;
+}
+.citation small
+{
+    font-size: smaller;
+}
+
+/* ICONE */
+.icone
+{
+    text-align: center;
+    font-size: 7rem;
+}
