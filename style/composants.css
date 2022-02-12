@@ -8,6 +8,7 @@ header #titre
     font-weight: 900;
     font-size: xx-large;
     margin-bottom: 1rem;
+    text-align: center;
 }
 header div#menu
 {
