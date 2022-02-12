@@ -1,0 +1,20 @@
+{
+    "nom": "Français",
+    "code": "fr",
+    "menu": [
+        "Accueil",
+        "Projets",
+        "A propos",
+        "Connexion"
+    ],
+    "mots": {
+        "a venir": "à venir",
+        "erreur": "erreur"
+    },
+    "elements": {
+        "citation": [
+            "Le logiciel, c'est comme le sexe, c'est meilleur quand c'est <b>libre</b>.",
+            "Conférence de la Free Software Foundation, février 1986"
+        ]
+    }
+}

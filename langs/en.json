@@ -1,0 +1,20 @@
+{
+    "nom": "English",
+    "code": "en",
+    "menu": [
+        "Home",
+        "Projects",
+        "About",
+        "Log in"
+    ],
+    "mots": {
+        "a venir": "coming soon",
+        "erreur": "error"
+    },
+    "elements": {
+        "citation": [
+            "Software is like sex : it's better when it's <b>free</b>.",
+            "Free Software Foundation Conference, february 1986"
+        ]
+    }
+}

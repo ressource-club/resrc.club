@@ -4,11 +4,15 @@
 }
 
 /* FOOTER */
-footer a
+footer a, footer div#github
 {
     padding: 0 2rem;
 }
 footer a:hover
 {
     text-decoration: underline;
+}
+footer #langues
+{
+    font-size: 0.75rem;
 }
