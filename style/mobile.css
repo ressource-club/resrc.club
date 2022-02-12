@@ -1,6 +1,7 @@
 @media (min-width: 992px)
 {
     body { text-align: center!important;}
+    body #vue { width: 96%!important; }
 } 
 @media (max-width: 992px) 
 {

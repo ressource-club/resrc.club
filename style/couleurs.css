@@ -4,7 +4,6 @@
     --couleur-texte: rgb(250 250 250);
 }
 
-
 a
 {
     color: var(--couleur-texte);
