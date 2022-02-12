@@ -7,12 +7,12 @@ include_once __RACINE__ . 'sys/HTML.php';
 
 // Langue
 if (session_status() == PHP_SESSION_NONE) session_start();
-$_LANGUE = charger_langue($_SESSION, $_GET);
+charger_langue($_SESSION, $_GET);
 
 // Routage
 $route = definir_route($_SERVER['REQUEST_URI']);
 
 // HTML
-charger_html($route, $_LANGUE);
+charger_html($route);
 
 ?>

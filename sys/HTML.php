@@ -2,7 +2,7 @@
 
 const HTML_DOSSIER = __RACINE__ . 'html/';
 
-function charger_html(string $fichier, array &$_LANGUE)
+function charger_html(string $fichier)
 {
     include HTML_DOSSIER . 'composants/entete.html';
     include HTML_DOSSIER . $fichier . '.html';
