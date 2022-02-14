@@ -2,8 +2,12 @@
         </div>
         <footer>
             <div id="langues">
-                <a id="fr" href="?lang=fr">Français</a>
-                <a id="en" href="?lang=en">English</a>
+                <?php
+                    if (isset($_SESSION[LANGUES_INDEX]))
+                        foreach ($_SESSION[LANGUES_INDEX] as $code => $infos) 
+                            echo '<a id="' . $code . '" href="?lang=' . $code . 
+                            '">' . $infos["nom"] . '</a>';
+                ?>
             </div>
         </footer>
     </div>
