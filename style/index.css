@@ -2,6 +2,7 @@
     const CSS_DOSSIER = __RACINE__ . 'style/';
     include_once CSS_DOSSIER . 'couleurs.css';
     include_once CSS_DOSSIER . 'police.css';
+    include_once CSS_DOSSIER . 'animations.css';
     include_once CSS_DOSSIER . 'elements.css';
     include_once CSS_DOSSIER . 'composants.css';
     include_once CSS_DOSSIER . 'mobile.css';
