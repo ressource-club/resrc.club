@@ -17,14 +17,26 @@
 }
 
 /* PROJETS */
-ul#liste-projets
+div.projets
+{
+    text-align: center;
+}
+div#autres.projets
+{
+    margin-top: 3rem;
+}
+div.projets ul.liste-projets
 {
     display: flex;
 }
-ul#liste-projets div
+div.projets ul.liste-projets
 {
-    width: 50%;
+    margin-top: 0.7rem;
+}
+div.projets ul.liste-projets div
+{
+    margin-top: 1rem;
+    width: 100%;
     margin: 0 0.25rem;
-    text-align: center;
-    font-size: larger;
+    font-size: normal;
 }

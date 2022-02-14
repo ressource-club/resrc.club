@@ -1,8 +1,3 @@
-@media (min-width: 992px)
-{
-    body { text-align: center!important;}
-    body #vue { width: 96%!important; }
-} 
 @media (max-width: 992px) 
 {
     header { display: block; }
@@ -15,7 +10,13 @@
         font-size: 0.8rem!important;
     }
     header #menu a { padding: 0 0.85rem!important; }
+    div.projets ul.liste-projets { display: inline!important; }
 }
+@media (min-width: 992px)
+{
+    body { text-align: center!important;}
+    body #vue { width: 96%!important; }
+} 
 @media (max-width: 992px) and (min-width: 768px)
 {
 }
