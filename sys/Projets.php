@@ -17,7 +17,7 @@ function charger_projets() : array
 {return json_decode(join("\n", file(PROJETS_FICHIER)), true) ?? []; }
 
 function afficher_lien(array &$lien) : void
-{ print('<a href="' . $lien[LIEN_URL] . '">' . $lien[LIEN_TEXTE] . '</a>'); }
+{ print('<a href="' . $lien[LIEN_URL] . '" target="_blank">' . $lien[LIEN_TEXTE] . '</a>'); }
 
 function afficher_projet(array &$projet) : void
 {
@@ -45,14 +45,21 @@ function afficher_categorie(array &$categorie, int $i) : void
         print("<h3>" . $_SESSION[LANGUE_INDEX]['mots'][$categorie[CATEGORIE_NOM]] . "</h3>");
     print('<ul class="liste-projets"><div>');
     $n_projets = count($categorie[CATEGORIE_PROJETS]);
+    // TODO Faire une fonction selon n colonnes ?
     for ($p = 0; $p < $n_projets; $p += 3) 
         afficher_projet($categorie[CATEGORIE_PROJETS][$p]);
-    print('</div><div>');
-    for ($p = 1; $p < $n_projets; $p += 3) 
-        afficher_projet($categorie[CATEGORIE_PROJETS][$p]);
-    print('</div><div>');
-    for ($p = 2; $p < $n_projets; $p += 3) 
-        afficher_projet($categorie[CATEGORIE_PROJETS][$p]);
+    if ($n_projets > 1)
+    {
+        print('</div><div>');
+        for ($p = 1; $p < $n_projets; $p += 3) 
+            afficher_projet($categorie[CATEGORIE_PROJETS][$p]);
+        if ($n_projets > 2)
+        {
+            print('</div><div>');
+            for ($p = 2; $p < $n_projets; $p += 3) 
+                afficher_projet($categorie[CATEGORIE_PROJETS][$p]);
+        }
+    }
     print('</div></ul></div>');
 }
 
