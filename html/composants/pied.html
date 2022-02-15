@@ -5,8 +5,8 @@
                 <?php
                     if (isset($_SESSION[LANGUES_INDEX]))
                         foreach ($_SESSION[LANGUES_INDEX] as $code => $infos) 
-                            echo '<a id="' . $code . '" href="?lang=' . $code . 
-                            '">' . $infos["nom"] . '</a>';
+                            print('<a id="' . $code . '" href="?lang=' . $code . 
+                            '">' . $infos["nom"] . '</a>');
                 ?>
             </div>
         </footer>

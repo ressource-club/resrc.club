@@ -1,0 +1,33 @@
+[
+    {
+        "projets":
+        [
+            {
+                "nom": "BTTP",
+                "meta": "a venir"
+            }
+        ]
+    },
+    {
+        "nom": "autres",
+        "projets":
+        [
+            {
+                "nom": "Hong Kong Hotspot",
+                "meta":
+                {
+                    "lien": 
+                    {
+                        "texte": "hkh.resrc.club",
+                        "url": "https://hkh.resrc.club/"
+                    },
+                    "git":
+                    {
+                        "texte": "tensaiji/EWEB-HongKongHotspot",
+                        "url": "https://github.com/tensaiji/EWEB-HongKongHotspot/"
+                    }
+                }
+            }
+        ]
+    }
+]
