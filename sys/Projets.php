@@ -1,6 +1,6 @@
 <?php
 
-const PROJETS_FICHIER = __RACINE__ . 'public/projets.json';
+const PROJETS_FICHIER = DATA_DOSSIER . 'projets.json';
 
 const CATEGORIE_NOM = 'nom';
 const CATEGORIE_PROJETS = 'projets';
@@ -14,7 +14,7 @@ const LIEN_TEXTE = 'texte';
 const LIEN_URL = 'url';
 
 function charger_projets() : array
-{return json_decode(join("\n", file(PROJETS_FICHIER)), true) ?? []; }
+{return json_decode(file_get_contents(PROJETS_FICHIER), true) ?? []; }
 
 function afficher_lien(array &$lien) : void
 { print('<a href="' . $lien[LIEN_URL] . '" target="_blank">' . $lien[LIEN_TEXTE] . '</a>'); }

@@ -1,10 +1,10 @@
 {
     "fr" : {
         "nom": "Français",
-        "fichier": "json/fr"
+        "fichier": "fr"
     },
     "en" : {
         "nom": "English",
-        "fichier": "json/en"
+        "fichier": "en"
     }
 }
