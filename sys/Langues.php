@@ -17,17 +17,19 @@ function charger_langues_diponibles(array &$session) : void
 function charger_langue(array &$session, array &$get) : void
 {
     if (!isset($session[LANGUES_INDEX])) charger_langues_diponibles($session);
+
     if (!isset($session[LANGUE_INDEX]) || isset($get[LANGUE_INDEX]))
     {
-        if (isset($get[LANGUE_INDEX]))
+        if (isset($get[LANGUE_INDEX]) && isset($session[LANGUES_INDEX][$get[LANGUE_INDEX]]))
         {
             $fichier = LANGUES_DOSSIER . $session[LANGUES_INDEX][$get[LANGUE_INDEX]]["fichier"] . '.json';
             if (!file_exists($fichier))
                 $fichier = LANGUES_DOSSIER . $session[LANGUES_INDEX][LANGUE_PAR_DEFAUT]["fichier"] . '.json';
         }
-        else
-            $fichier = LANGUES_DOSSIER . $session[LANGUES_INDEX][LANGUE_PAR_DEFAUT]["fichier"] . '.json';
-        $session[LANGUE_INDEX] = json_decode(join("\n", file($fichier)), true) ?? [];
+        else $fichier = LANGUES_DOSSIER . $session[LANGUES_INDEX][LANGUE_PAR_DEFAUT]["fichier"] . '.json';
+
+        if (file_exists($fichier))
+            $session[LANGUE_INDEX] = json_decode(join("\n", file($fichier)), true) ?? [];
     }
 }
 
