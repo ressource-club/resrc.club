@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $_SESSION[LANGUE_INDEX]['code'] ?>">
+<html lang="<?= $_SESSION[Langues::INDEX]['code'] ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,13 @@
     <title>ressource_club</title>
 
     <style>
-        <?php include_once __RACINE__ . 'style/index.css'; ?>
+        <?php 
+            /**
+             * Chargement brut de la feuille de style pour plus de simplicité.
+             * Le style étant simple et donc léger, la mise en cache n'est pas forcément une perte.
+             */
+            include_once __RACINE__ . 'style/index.css';
+        ?>
     </style>
 </head>
 
@@ -17,10 +23,10 @@
         <header>
             <h1 id="titre">ressource_club</h1>
             <div id="menu">
-                <a id="accueil" href="/"><?= $_SESSION[LANGUE_INDEX]['menu'][0] ?></a>
-                <a id="projets" href="/projets/"><?= $_SESSION[LANGUE_INDEX]['menu'][1] ?></a>
-                <a id="a-propos" href="/a-propos/"><?= $_SESSION[LANGUE_INDEX]['menu'][2] ?></a>
-                <a id="connexion" href="/connexion/"><?= $_SESSION[LANGUE_INDEX]['menu'][3] ?></a>
+                <a id="accueil" href="/"><?= $_SESSION[Langues::INDEX]['menu'][0] ?></a>
+                <a id="projets" href="/projets/"><?= $_SESSION[Langues::INDEX]['menu'][1] ?></a>
+                <a id="a-propos" href="/a-propos/"><?= $_SESSION[Langues::INDEX]['menu'][2] ?></a>
+                <a id="connexion" href="/connexion/"><?= $_SESSION[Langues::INDEX]['menu'][3] ?></a>
             </div>
         </header>
         <div id="contenu">

@@ -1,10 +1,4 @@
 {
-    "fr" : {
-        "nom": "Français",
-        "fichier": "fr"
-    },
-    "en" : {
-        "nom": "English",
-        "fichier": "en"
-    }
+    "fr": "Français",
+    "en": "English"
 }

@@ -3,10 +3,11 @@
         <footer>
             <div id="langues">
                 <?php
-                    if (isset($_SESSION[LANGUES_INDEX]))
-                        foreach ($_SESSION[LANGUES_INDEX] as $code => $infos) 
+                    // Affichage des langues disponibles.
+                    if (isset($_SESSION[Langues::DISPONIBLES_INDEX]))
+                        foreach ($_SESSION[Langues::DISPONIBLES_INDEX] as $code => $nom) 
                             print('<a id="' . $code . '" href="?lang=' . $code . 
-                            '">' . $infos["nom"] . '</a>');
+                            '">' . $nom . '</a>');
                 ?>
             </div>
         </footer>

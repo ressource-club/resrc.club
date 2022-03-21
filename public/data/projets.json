@@ -4,7 +4,15 @@
         [
             {
                 "nom": "BTTP",
-                "meta": "a venir"
+                "meta":
+                {
+                    "lien":
+                    {
+                        "texte": "bttp.resrc.club",
+                        "url": "https://bttp.resrc.club/"
+                    },
+                    "git": "à venir"
+                }
             }
         ]
     },
