@@ -39,7 +39,12 @@ abstract class HTML
     /**
      * Affichage d'un lien depuis un tableau issu d'un JSON.
      * @param array &$lien Tableau des informations relatives au lien.
+     * @param array &$session Tableau de session.
      */
-    public static function afficher_lien(array &$lien) : void
-    { print('<a href="' . ($lien[self::LIEN_URL] ?? '') . '" target="_blank">' . $lien[self::LIEN_TEXTE] . '</a>'); }
+    public static function afficher_lien(array &$lien, array &$session) : void
+    { 
+        print('<a href="' . ($lien[self::LIEN_URL] ?? '') . '" target="_blank">' . 
+            Langues::mot($lien[self::LIEN_TEXTE], $session) ?? $lien[self::LIEN_TEXTE]
+        . '</a>');
+    }
 }

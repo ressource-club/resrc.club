@@ -24,7 +24,7 @@ abstract class Langues
      * @param string $cle Clé du mot cible.
      * @param array &$session Tableau de session.
      */
-    public static function mot(string $cle, array &$session) : string
+    public static function mot(string $cle, array &$session) : ?string
     { return $session[self::INDEX][self::MOTS][$cle] ?? "null"; }
 
     /** Clé des langues disponibles. */

@@ -39,7 +39,7 @@ abstract class Projets
         print("<li><b>" . $projet[self::NOM] . " : </b><i>");
         // Affichage du lien associé au projet s'il existe.
         if ($meta = is_array($projet[self::META]))
-            HTML::afficher_lien($projet[self::META][self::META_LIEN]);
+            HTML::afficher_lien($projet[self::META][self::META_LIEN], $session);
         // Autrement, affichage du message associé au projet.
         else print(Langues::mot($projet[self::META], $session));
         print('</i>');
@@ -48,9 +48,9 @@ abstract class Projets
         {
             print("<br><small><i>");
             $git = $projet[self::META][self::META_GIT];
-            if (is_array($git)) HTML::afficher_lien($git);
-            // S'il ne s'agit pas d'un lien mais une chaîne de caractère, on l'affiche
-            else if (is_string($git)) print($git);
+            if (is_array($git)) HTML::afficher_lien($git, $session);
+            // S'il ne s'agit pas d'un lien mais une chaîne de caractère, on l'affiche.
+            else if (is_string($git)) print(Langues::mot($git, $session) ?? $git);
             print("</i></small>");
         }
         print('</li>');
