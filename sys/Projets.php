@@ -5,8 +5,8 @@
  */
 abstract class Projets
 {
-    /** Fichier JSON de la liste des projets. */
-    private const FICHIER = DATA_DOSSIER . 'projets.json';
+    /** Nom de la ressource associé à la liste des projets. */
+    private const RESSOURCE = 'projets';
 
     /** Clé du nom d'une catégorie de projets. */
     private const CATEGORIE_NOM = 'nom';
@@ -24,9 +24,10 @@ abstract class Projets
 
     /**
      * Chargement de la liste des projets depuis le fichier JSON dédié.
+     * @return array Contenu désérialisé du fichier.
      */
     public static function charger() : array
-    {return json_decode(file_get_contents(self::FICHIER), true) ?? []; }
+    {return json_decode(Data::lire(self::RESSOURCE), true); }
 
     /**
      * Affichage d'un projet depuis un tableau issu d'un JSON.
@@ -41,7 +42,7 @@ abstract class Projets
         if ($meta = is_array($projet[self::META]))
             HTML::afficher_lien($projet[self::META][self::META_LIEN], $session);
         // Autrement, affichage du message associé au projet.
-        else print(Langues::mot($projet[self::META], $session));
+        else print(Langues::mot($projet[self::META], $session) ?? $projet[self::META]);
         print('</i>');
         // Affichage du lien du code source du projet s'il existe.
         if ($meta && isset($projet[self::META][self::META_GIT]))

@@ -44,7 +44,7 @@ abstract class HTML
     public static function afficher_lien(array &$lien, array &$session) : void
     { 
         print('<a href="' . ($lien[self::LIEN_URL] ?? '') . '" target="_blank">' . 
-            Langues::mot($lien[self::LIEN_TEXTE], $session) ?? $lien[self::LIEN_TEXTE]
+            (Langues::mot($lien[self::LIEN_TEXTE], $session) ?? $lien[self::LIEN_TEXTE])
         . '</a>');
     }
 }
