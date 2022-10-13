@@ -1,0 +1,132 @@
+@import url('./config.css');
+
+.resrc
+{
+    font-size: var(--resrc-txt-taille);
+    font-family: var(--resrc-txt-police);
+    height: 100vh;
+    color: var(--resrc-col-texte);
+    background-color: var(--resrc-col-fond);
+}
+
+.resrc, .resrc *
+{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden;
+    transition: all var(--resrc-gfx-unite) ease;
+}
+
+/* VUE */
+
+.resrc>header, .resrc>footer
+{
+    height: 6.28vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+/* En-tête */
+
+.resrc>header>section#logo 
+{
+    width: 40vw;
+    padding-top: 0.785vh;
+}
+
+.resrc>header>section#logo:hover,
+.resrc>header>section#logo:focus
+{
+    color: var(--resrc-col-texte);
+    background-color: var(--resrc-col-fond);
+}
+
+.resrc>header>menu#onglets
+{
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.resrc>header>menu#onglets>li
+{
+    padding-top: 1.57vh;
+    width: 20%;
+}
+
+/* Contenu */
+
+.resrc>main
+{
+    height: 81.16vh;
+    padding: 3.14vh 3.14vw;
+    overflow-y: auto;
+}
+
+/* Pied de page */
+
+.resrc>footer
+{
+    border-top: 1px solid var(--resrc-col-texte);
+}
+
+.resrc>footer>menu
+{
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+}
+
+.resrc>footer>menu>li
+{
+    width: 50%;
+    padding-top: 1.57vh;
+}
+
+
+.resrc>footer>nav#profil
+{
+    width: 30vw;
+    padding-top: 1.57vh;
+    color: var(--resrc-col-fond);
+    background-color: var(--resrc-col-texte);
+}
+
+/* GENERAL */
+
+.resrc h1, .resrc h2, .resrc h3,
+.resrc h4, .resrc h5, .resrc h6
+{
+    text-transform: lowercase;
+    letter-spacing: 0.3925rem;
+}
+
+.resrc h1 { font-size: calc(2.5 * var(--resrc-txt-taille)); }
+.resrc h2 { font-size: calc(2 * var(--resrc-txt-taille)); }
+.resrc h3 { font-size: calc(1.75 * var(--resrc-txt-taille)); }
+.resrc h4 { font-size: calc(1.5 * var(--resrc-txt-taille)); }
+.resrc h5 { font-size: calc(1.25 * var(--resrc-txt-taille)); }
+.resrc h6 { font-size: calc(1.125 * var(--resrc-txt-taille)); }
+
+.resrc p
+{
+    text-align: justify;
+}
+
+.resrc .resrc-lien:hover, .resrc-lien:focus,
+.resrc .resrc-lien-externe:hover, .resrc-lien-externe:focus
+{
+    cursor: pointer;
+    color: var(--resrc-col-fond);
+    background-color: var(--resrc-col-texte);
+    border-radius: calc(0.25 * var(--resrc-txt-taille));
+    transform: translateY(-0.3925vh);
+}
+
+.resrc .resrc-lien-externe:hover, .resrc-lien-externe:focus
+{
+    text-decoration: underline;
+}

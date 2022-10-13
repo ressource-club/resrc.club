@@ -1,0 +1,20 @@
+@media (max-width: 1330px)
+{
+    .resrc>header
+    {
+        flex-direction: column;
+        height: 12.56vh;
+    }
+
+    .resrc>header>section#logo, .resrc>header>menu#onglets
+    {
+        width: 100vw;
+        height: 6.28vh;
+    }
+
+    .resrc>main
+    {
+        height: 78.02vh;
+        padding: 1.57vh 3.14vw;
+    }
+}

@@ -1,7 +1,0 @@
-<?php
-    include_once __RACINE__ . 'sys/Projets.php';
-
-    $projets = Projets::charger();
-    foreach ($projets as $i => $categorie) 
-        Projets::afficher_categorie($categorie, $i, $_SESSION);
-?>
