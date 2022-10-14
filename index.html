@@ -12,23 +12,89 @@
 <body class="resrc">
     <header>
         <section id="logo" class="resrc-lien">
-            <h1>ressource_club</h1>
+            <a href="./">
+                <h1>res<span>sou</span>rc<span>e</span>_club</h1>
+            </a>
         </section>
-        <menu id="onglets">
-            <li id="projets" class="resrc-lien">
-                <h5>Projets</h5>
+        <menu id="onglets-normal">
+            <li id="projets" class="resrc-lien" tabindex="1">
+                <a href="./projets/">
+                    <h5>Projets</h5>
+                </a>
             </li>
-            <li id="membres" class="resrc-lien">
-                <h5>Membres</h5>
+            <li id="membres" class="resrc-lien" tabindex="2">
+                <a href="./membres/">
+                    <h5>Membres</h5>
+                </a>
             </li>
-            <li id="stats" class="resrc-lien">
-                <h5>Stats</h5>
+            <li id="stats" class="resrc-lien" tabindex="3">
+                <a href="./stats/">
+                    <h5>Stats</h5>
+                </a>
             </li>
-            <li id="a-propos" class="resrc-lien">
-                <h5>À propos</h5>
+            <li id="a-propos" class="resrc-lien" tabindex="4">
+                <a href="./a-propos/">
+                    <h5>À propos</h5>
+                </a>
             </li>
-            <li id="blog" class="resrc-lien">
-                <h5>Blog</h5>
+            <li id="blog" class="resrc-lien" tabindex="5">
+                <a href="./blog/">
+                    <h5>Blog</h5>
+                </a>
+            </li>
+        </menu>
+        <menu id="activation-onglets-mobile">
+            <li id="onglets" class="resrc-lien" tabindex="1">
+                <a href="#onglets" onclick="activation_onglets()">
+                    <h1>+</h1>
+                </a>
+            </li>
+        </menu>
+        <menu id="onglets-mobile">
+            <li id="projets-mobile" class="resrc-lien" tabindex="2">
+                <a href="./projets/">
+                    <h3>Projets</h3>
+                </a>
+            </li>
+            <li id="membres-mobile" class="resrc-lien" tabindex="3">
+                <a href="./membres/">
+                    <h3>Membres</h3>
+                </a>
+            </li>
+            <li id="stats-mobile" class="resrc-lien" tabindex="4">
+                <a href="./stats/">
+                    <h3>Stats</h3>
+                </a>
+            </li>
+            <li id="a-propos-mobile" class="resrc-lien" tabindex="5">
+                <a href="./a-propos/">
+                    <h3>À propos</h3>
+                </a>
+            </li>
+            <li id="blog-mobile" class="resrc-lien" tabindex="6">
+                <a href="./blog/">
+                    <h3>Blog</h3>
+                </a>
+            </li>
+            <li id="contact-mobile" class="resrc-lien" tabindex="7">
+                <a href="#contact" onclick="activation_fenetre_mobile('contact')">
+                    <h5>Contact</h5>
+                </a>
+            </li>
+            <li id="preferences-mobile" class="resrc-lien" tabindex="8">
+                <a href="#preferences" onclick="activation_fenetre_mobile('preferences')">
+                    <h5>Préférences</h5>
+                </a>
+            </li>
+            <li id="api-mobile" class="resrc-lien-externe" tabindex="9">
+                <a href="https://api.resrc.club/">
+                    <h6>API</h6>
+                </a>
+            </li>
+            <li id="source-mobile" class="resrc-lien-externe" tabindex="10">
+                <a href="https://regit.resrc.club/club/www.resrc.club/">
+                    <h6>Source</h6>
+                </a>
             </li>
         </menu>
     </header>
@@ -119,25 +185,95 @@
         </article>
     </main>
     <footer>
-        <menu id="gauche">
-            <li id="contact" class="resrc-lien">
-                <h5>Contact</h5>
-            </li>
-            <li id="api" class="resrc-lien-externe">
-                <h5>API</h5>
-            </li>
-        </menu>
-        <nav id="profil" class="resrc-lien">
-            <h5>Se connecter</h5>
+        <nav id="menus">
+            <menu id="gauche">
+                <li id="contact" class="resrc-lien" tabindex="6">
+                    <a href="#contact" onclick="activation_fenetre('contact')">
+                        <h6>Contact</h6>
+                    </a>
+                </li>
+                <li id="api" class="resrc-lien-externe" tabindex="7">
+                    <a href="https://api.resrc.club/">
+                        <h6>API</h6>
+                    </a>
+                </li>
+            </menu>
+            <nav id="profil" class="resrc-lien" tabindex="8">
+                <a href="#profil" onclick="activation_fenetre('profil')">
+                    <h5>Se connecter</h5>
+                </a>
+            </nav>
+            <menu id="droite">
+                <li id="source" class="resrc-lien-externe" tabindex="9">
+                    <a href="https://regit.resrc.club/club/www.resrc.club/">
+                        <h6>Source</h6>
+                    </a>
+                </li>
+                <li id="preferences" class="resrc-lien" tabindex="10">
+                    <a href="#preferences" onclick="activation_fenetre('preferences')">
+                        <h6>Préférences</h6>
+                    </a>
+                </li>
+            </menu>
         </nav>
-        <menu id="droite">
-            <li id="source" class="resrc-lien-externe">
-                <h5>Source</h5>
-            </li>
-            <li id="langue" class="resrc-lien">
-                <h5>Langue</h5>
-            </li>
-        </menu>
+        <nav id="menus-mobile">
+            <nav id="profil-mobile" class="resrc-lien">
+                <a href="#profil" onclick="activation_fenetre('profil')">
+                    <h5>Se connecter</h5>
+                </a>
+            </nav>
+        </nav>
+        <canvas id="masque" onclick="activation_masque()"></canvas>
+        <div id="fenetres">
+            <section id="fenetre-contact">
+                <h2>Contact</h2>
+                <form method="post">
+                    <input type="email" name="email" id="contact-email" required placeholder="vous@mail.com">
+                    <textarea name="texte" id="contact-texte" rows="5" required placeholder="J'ai un projet qui pourrait changer le monde !"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+            <section id="fenetre-profil">
+                <h2>Profil</h2>
+                <form method="post">
+                    <h5>Identifiant</h5>
+                    <input type="text" name="id" id="profil-id" required placeholder="xxx_dev2001_xxx">
+                    <h5>Mot de passe</h5>
+                    <input type="password" name="mdp" id="profil-mdp" required placeholder="0123456789">
+                    <div class="resrc-condition">
+                        <input type="checkbox" name="enregistrer" id="profil-enregistrer">
+                        <label for="profil-enregistrer">
+                            Enregistrer la connexion localement
+                        </label>
+                    </div>
+                    <button type="submit">Se connecter</button>
+                </form>
+            </section>
+            <section id="fenetre-preferences">
+                <h2>Préférences</h2>
+                <form method="get">
+                    <h5>Langue</h5>
+                    <select name="langue" id="langue">
+                        <option value="fr" selected>Français</option>
+                        <option value="en">English</option>
+                    </select>
+                    <button type="submit">Modifier</button>
+                </form>
+            </section>
+        </div>
     </footer>
+
+    <script src="./style/animations/fenetres.js"></script>
+    <script src="./style/animations/onglets.js"></script>
+    <script>
+        let ancre = location.href.split('#')[1];
+        if (!!ancre && ancre !== 'onglets') activation_fenetre(ancre);
+
+        function activation_fenetre_mobile(id)
+        {
+            activation_onglets();
+            activation_fenetre(id);
+        }
+    </script>
 </body>
 </html>
