@@ -1,0 +1,11 @@
+:root
+{
+    /* TEXTE */
+    /* Police */
+    --resrc-txt-police: 'Arial';
+    /* COULEURS */
+    /* Texte */
+    --resrc-col-texte: #1EFC1E;
+    /* Fond */
+    --resrc-col-fond: #0C0C0C;
+}

@@ -1,16 +1,11 @@
+@import url('./themes/classique.css');
+/* @import url('./themes/matrix.css'); */
+
 :root
 {
     /* TEXTE */
     /* Taille */
     --resrc-txt-taille: 1.14rem;
-    /* Police */
-    --resrc-txt-police: 'Courier New', Courier, monospace;
-
-    /* COULEURS */
-    /* Texte */
-    --resrc-col-texte: rgb(214, 214, 214);
-    /* Fond */
-    --resrc-col-fond: rgb(14 14 14);
 
     /* ANIMATION */
     /* Unité */

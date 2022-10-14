@@ -67,17 +67,88 @@
 
 .resrc>main
 {
-    height: 81.16vh;
-    padding: 3.14vh 3.14vw;
+    height: 77.44vh;
+    padding: 3.14vh 3.14vw 6.28vh;
     overflow-y: auto;
 }
 
-.resrc>main>article
+.resrc>main>section
 {
     margin: 1.57vh 3.14vw;
     padding: 1.57vh 3.14vw;
+}
+
+.resrc>main>section, .resrc>main>section article,
+.resrc>main>section a
+{
     border-radius: calc(0.25 * var(--resrc-txt-taille));
 }
+
+.resrc>main>section>h2
+{
+    text-align: center;
+}
+
+.resrc>main>section .articles
+{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin-top: 1.57vh;
+}
+
+.resrc>main>section .articles>article
+{
+    width: 40%;
+    padding: 1.57vh 2.5%;    
+}
+
+.resrc>main>section h6.resrc-plus
+{
+    text-align: center;
+    font-style: italic;
+}
+
+.resrc>main>section h6.resrc-plus>a
+{
+    width: 20%;
+    margin: 0 40%;
+    padding: 0.785vh 0;
+    display: block;
+}
+
+.resrc>main>section .articles>article,
+.resrc>main>section h6.resrc-plus
+{
+    margin: 1.57vh 2.5%;
+}
+
+
+.resrc>main>section article.resrc-resume>h5
+{
+    margin-bottom: 0.785vh;
+}
+
+.resrc>main>section.resrc-citation
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resrc>main>section.resrc-centrale
+{
+    height: 100%;
+}
+
+.resrc>main>section.resrc-citation>h3
+{
+    font-weight: normal;
+    margin-bottom: 1.57vh;
+}
+
 
 /* Pied de page */
 
@@ -307,4 +378,21 @@
 .resrc .resrc-condition>label
 {
     text-transform: lowercase;
+    font-size: calc(0.9 * var(--resrc-txt-taille));
+}
+
+.resrc span.resrc-curseur
+{
+    display: inline-block;
+    position: relative;
+    top: 0.25rem;
+    left: -1.25rem;
+    width: var(--resrc-txt-taille);
+    height: calc(1.5 * var(--resrc-txt-taille));
+    z-index: -1;
+}
+
+.resrc span.resrc-curseur.actif
+{
+    background-color: var(--resrc-col-texte);
 }
