@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resrc.club</title>
+    <title>resrc.club/blog</title>
 
-    <link rel="stylesheet" href="style/resrc.css">
-    <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="../style/resrc.css">
+    <link rel="stylesheet" href="../style/media.css">
 </head>
 <body class="resrc">
     <header>
         <section id="logo" class="resrc-lien">
-            <a href="./">
+            <a href="../">
                 <h1>res<span class="resrc-non-mobile">sou</span>rc<span class="resrc-non-mobile">e</span>_club</h1>
             </a>
         </section>
         <menu id="onglets-normal">
             <li id="projets" class="resrc-lien" tabindex="1">
-                <a href="./projets/">
+                <a href="../projets/">
                     <h5>Projets</h5>
                 </a>
             </li>
             <li id="membres" class="resrc-lien" tabindex="2">
-                <a href="./membres/">
+                <a href="../membres/">
                     <h5>Membres</h5>
                 </a>
             </li>
             <li id="stats" class="resrc-lien" tabindex="3">
-                <a href="./stats/">
+                <a href="../stats/">
                     <h5>Stats</h5>
                 </a>
             </li>
             <li id="a-propos" class="resrc-lien" tabindex="4">
-                <a href="./a-propos/">
+                <a href="../a-propos/">
                     <h5>À propos</h5>
                 </a>
             </li>
-            <li id="blog" class="resrc-lien" tabindex="5">
-                <a href="./blog/">
+            <li id="blog" class="resrc-lien actif" tabindex="5">
+                <a href="./">
                     <h5>Blog</h5>
                 </a>
             </li>
@@ -52,27 +52,27 @@
         </menu>
         <menu id="onglets-mobile">
             <li id="projets-mobile" class="resrc-lien" tabindex="2">
-                <a href="./projets/">
+                <a href="../projets/">
                     <h3>Projets</h3>
                 </a>
             </li>
             <li id="membres-mobile" class="resrc-lien" tabindex="3">
-                <a href="./membres/">
+                <a href="../membres/">
                     <h3>Membres</h3>
                 </a>
             </li>
             <li id="stats-mobile" class="resrc-lien" tabindex="4">
-                <a href="./stats/">
+                <a href="../stats/">
                     <h3>Stats</h3>
                 </a>
             </li>
             <li id="a-propos-mobile" class="resrc-lien" tabindex="5">
-                <a href="./a-propos/">
+                <a href="../a-propos/">
                     <h3>À propos</h3>
                 </a>
             </li>
-            <li id="blog-mobile" class="resrc-lien" tabindex="6">
-                <a href="./blog/">
+            <li id="blog-mobile" class="resrc-lien actif" tabindex="6">
+                <a href="../blog/">
                     <h3>Blog</h3>
                 </a>
             </li>
@@ -99,19 +99,41 @@
         </menu>
     </header>
     <main>
-        <section id="citation-aleatoire" class="resrc-citation resrc-centrale">
-            <h3>Le logiciel, c'est comme le sexe, c'est meilleur quand c'est <b>libre</b>.
-                <span class="resrc-curseur resrc-clignotement"></span>
-            </h3>
-            <small>
-                Linus Torvalds - <i>Conférence de la Free Software Foundation, février 1986</i>
-            </small>
+        <section id="actions" class="resrc-actions">
+            <menu id="principales">
+                <li id="parcourir">
+                    <h3>Parcourir</h3>
+                    <menu>
+                        <li id="categories">
+                            <a href="./categories/">
+                                <button>Catégories</button>
+                            </a>
+                        </li>
+                        <li id="rechercher">
+                            <a href="./rechercher/">
+                                <button>Rechercher<span class="resrc-non-mobile"> un article</span></button>
+                            </a>
+                        </li>
+                    </menu>
+                </li>
+                <li id="contribuer">
+                    <h3>Contribuer</h3>
+                    <menu>
+                        <li id="ecrire">
+                            <button onclick="activation_fenetre('profil')">Ecrire<span class="resrc-non-mobile"> un article</span></button>
+                        </li>
+                        <li id="traduire">
+                            <button onclick="activation_fenetre('profil')">Traduire<span class="resrc-non-mobile"> un article</span></button>
+                        </li>
+                    </menu>
+                </li>
+            </menu>
         </section>
         <section id="derniers-articles" class="resrc-centrale">
             <h2>Derniers articles</h2>
             <div class="resrc-articles">
                 <article class="resrc-resume">
-                    <a href="./blog/article/" class="resrc-lien">
+                    <a href="./article/" class="resrc-lien">
                         <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
@@ -119,7 +141,7 @@
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./blog/article/" class="resrc-lien">
+                    <a href="./article/" class="resrc-lien">
                         <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
@@ -127,7 +149,7 @@
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./blog/article/" class="resrc-lien">
+                    <a href="./article/" class="resrc-lien">
                         <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
@@ -135,7 +157,7 @@
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./blog/article/" class="resrc-lien">
+                    <a href="./article/" class="resrc-lien">
                         <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
@@ -144,39 +166,39 @@
                 </article>
             </div>
             <h6 class="resrc-plus">
-                <a href="./blog/derniers/" class="resrc-lien">+</a>
+                <a href="./derniers/" class="resrc-lien">+</a>
             </h6>
         </section>
-        <section id="derniers-projets" class="resrc-centrale">
-            <h2>Derniers projets</h2>
+        <section id="top-articles" class="resrc-centrale">
+            <h2>Les plus lus</h2>
             <div class="resrc-articles">
                 <article class="resrc-resume">
-                    <a href="./projets/appie/" class="resrc-lien">
-                        <h5>appie</h5>
+                    <a href="./article/" class="resrc-lien">
+                        <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
                         </p>
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./projets/testo/" class="resrc-lien">
-                        <h5>testo</h5>
+                    <a href="./article/" class="resrc-lien">
+                        <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
                         </p>
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./projets/datam/" class="resrc-lien">
-                        <h5>datam</h5>
+                    <a href="./article/" class="resrc-lien">
+                        <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
                         </p>
                     </a>
                 </article>
                 <article class="resrc-resume">
-                    <a href="./projets/bttp/" class="resrc-lien">
-                        <h5>bttp</h5>
+                    <a href="./article/" class="resrc-lien">
+                        <h5>article</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem neque, molestias velit totam eum iure voluptas ea maiores commodi et eveniet ab nesciunt eligendi eaque pariatur! Voluptate, in non.
                         </p>
@@ -184,7 +206,7 @@
                 </article>
             </div>
             <h6 class="resrc-plus">
-                <a href="./projets/derniers/" class="resrc-lien">+</a>
+                <a href="./top/" class="resrc-lien">+</a>
             </h6>
         </section>
     </main>
@@ -278,9 +300,9 @@
         </div>
     </footer>
 
-    <script src="./style/animations/clignotement.js"></script>
-    <script src="./style/animations/fenetres.js"></script>
-    <script src="./style/animations/onglets.js"></script>
+    <script src="../style/animations/clignotement.js"></script>
+    <script src="../style/animations/fenetres.js"></script>
+    <script src="../style/animations/onglets.js"></script>
     <script>
         let ancre = location.href.split('#')[1];
         if (!!ancre && ancre !== 'onglets') activation_fenetre(ancre);
